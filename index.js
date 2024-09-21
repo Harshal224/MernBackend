@@ -31,7 +31,6 @@ app.post('/login',(req, res) => {
 
 })
 
-
 app.post('/',(req, res) => {
     CustumerModel.create(req.body)
     .then(custumers => res.json(custumers))
