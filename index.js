@@ -8,13 +8,13 @@ const http = require('mongoose')
 const port = 10000;
 
 
-app.use(cors({
-    origin: 'https://shreesamatrh-front.onrender.com',
-}));
+
 
 const app = express()
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: 'https://shreesamatrh-front.onrender.com',
+}));
 
 mongoose.connect("mongodb+srv://harshalbankar2222:RZ2NDoCWu7hlQVtU@store-test-db2.1bpzl.mongodb.net/?retryWrites=true&w=majority&appName=store-test-db2");
 
