@@ -3,6 +3,7 @@ const mongoose = require("mongoose")
 const cors =require("cors")
 const CustumerModel = require('./models/Custumer')
 const partModel = require('./models/Parts')
+const http = require('mongoose')
 
 
 
@@ -11,7 +12,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect("mongodb://localhost:27017/custumer");
+mongoose.connect("mongodb+srv://harshalbankar2222:RZ2NDoCWu7hlQVtU@store-test-db2.1bpzl.mongodb.net/?retryWrites=true&w=majority&appName=store-test-db2");
 
 app.post('/login',(req, res) => {
     const {email,password} = req.body;
