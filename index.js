@@ -5,8 +5,12 @@ const CustumerModel = require('./models/Custumer')
 const partModel = require('./models/Parts')
 const http = require('mongoose')
 
+const port = 10000;
 
-
+const cors = require('cors');
+app.use(cors({
+    origin: 'https://shreesamatrh-front.onrender.com',
+}));
 
 const app = express()
 app.use(express.json())
